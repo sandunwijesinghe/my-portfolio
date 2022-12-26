@@ -5,11 +5,11 @@ function Navbar() {
   const [nav, setNav] = useState(false);
 
   const navLinks = [
-    { id: 1, name: "Home" },
-    { id: 2, name: "About" },
-    { id: 3, name: "Technologies" },
-    { id: 4, name: "Projects" }, 
-    { id: 5, name: "Contact" },
+    { id: 1, name: "home" },
+    { id: 2, name: "about" },
+    { id: 3, name: "technologies" },
+    { id: 4, name: "projects" }, 
+    { id: 5, name: "contact" },
   ];
 
   return (
@@ -24,7 +24,8 @@ function Navbar() {
               key={id}
               className=" px-4 cursor-pointer capitalize font-medium text-gray-400 hover:scale-110 duration-200"
             >
-              {name}
+              <Link to={name} smooth duration={500}>{name}</Link>
+              
             </li>
           );
         })}
@@ -44,7 +45,7 @@ function Navbar() {
                 key={id}
                 className="px-4 cursor-pointer capitalize py-6 text-4xl"
               >
-                {name}
+                <Link to={name} smooth duration={500} onClick={()=>setNav(!nav)}>{name}</Link>
               </li>
             );
           })}
