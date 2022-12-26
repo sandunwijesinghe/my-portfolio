@@ -8,14 +8,14 @@ function Navbar() {
     { id: 1, name: "Home" },
     { id: 2, name: "About" },
     { id: 3, name: "Technologies" },
-    { id: 4, name: "Projects" },
+    { id: 4, name: "Projects" }, 
     { id: 5, name: "Contact" },
   ];
 
   return (
     <div className="flex justify-between items-center w-full h-20 text-white bg-black fixed px-4">
       <div>
-        <h1 className="text-5xl font-signature ml-2">Sandun Wijesinghe</h1>
+        <h1 className="text-5xl font-signature ml-2">SW</h1>
       </div>
       <ul className="hidden md:flex">
         {navLinks.map(({ id, name }) => {
